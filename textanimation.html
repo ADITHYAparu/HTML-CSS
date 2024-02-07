@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Menu Hover Effect</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .menu-item {
+            position: relative;
+            display: inline-block;
+            font-size: 18px;
+            margin: 0 20px;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+            overflow: hidden;
+        }
+
+        .menu-item::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff00ff, #00ff00, #ff00ff);
+            opacity: 0;
+            transform: scale(0.1) rotate(45deg);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            z-index: -1;
+        }
+
+        .menu-item:hover::before {
+            opacity: 1;
+            transform: scale(1) rotate(45deg);
+            
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#" class="menu-item">Home</a>
+    <br>
+    <a href="#" class="menu-item">About</a>
+    <br>
+    <a href="#" class="menu-item">Services</a>
+    <br>
+    <a href="#" class="menu-item">Contact</a>
+    <br>
+    <a href="#" class="menu-item">Login</a>
+
+</body>
+</html>
