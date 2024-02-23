@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>
+            FOREST PARALLAX
+        </title>
+        <link rel="stylesheet" href="forest.css">
+    </head>
+    <body>
+        <header id="header">
+            <a href="#" class="logo">jungle</a>
+            <ul>
+                <li><a href="" class="active">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Destination</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </header>
+        <section class="home">
+            <h2 id="text"><span>It'S time for a new</span><br>Adventure</h2>
+            <img src="/images/bird1.png" id="bird1">
+            <img src="/images/bird2.png" id="bird2">
+            <img src="/images/forest.png" id="forest">
+            <a href="" id="btn">Explore</a>
+            <img src="images/rocks.png" id="rocks">
+            <img src="/images/water.png" id="water">
+            
+        </section>
+
+        <section class="sea">
+            <h2>parallax</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet repellat dicta fugit doloremque
+                corporis non eligendi minima voluptate hic accusantium! Fugit numquam eaque dolores sit 
+                exercitationem vitae id error blanditiis. Amet nam saepe magnam ullam soluta, vel deserunt
+                 maiores iusto corporis alias. Numquam nesciunt praesentium vitae eos impedit perspiciatis 
+                quibusdam assumenda? Repellat in iure ullam accusantium beatae ea nihil quo veniam nostrum odit 
+               officia distinctio tenetur molestiae nam consectetur harum adipisci, blanditiis aspernatur
+                impedit aperiam rem exercitationem. Repudiandae officia eligendi ea reiciendis! Neque aliquam 
+                eligendi exercitationem molestias porro? Ut nihil officia vel eum modi veniam odit. Quae quos
+               ullam quasi perferendis, distinctio fugit veniam vel! Recusandae commodi, error mollitia 
+               corporis necessitatibus nobis ipsa sequi rerum quisquam hic vitae a! Cupiditate repellendus 
+              facilis, laboriosam doloremque eos magni voluptatibus?
+              <br><br> 
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet repellat dicta fugit doloremque
+                corporis non eligendi minima voluptate hic accusantium! Fugit numquam eaque dolores sit 
+                exercitationem vitae id error blanditiis. Amet nam saepe magnam ullam soluta, vel deserunt
+                 maiores iusto corporis alias. Numquam nesciunt praesentium vitae eos impedit perspiciatis 
+                quibusdam assumenda? Repellat in iure ullam accusantium beatae ea nihil quo veniam nostrum odit 
+               officia distinctio tenetur molestiae nam consectetur harum adipisci, blanditiis aspernatur
+                impedit aperiam rem exercitationem. Repudiandae officia eligendi ea reiciendis! Neque aliquam 
+                eligendi exercitationem molestias porro? Ut nihil officia vel eum modi veniam odit. Quae quos
+               ullam quasi perferendis, distinctio fugit veniam vel! Recusandae commodi, error mollitia 
+               corporis necessitatibus nobis ipsa sequi rerum quisquam hic vitae a! Cupiditate repellendus 
+              facilis, laboriosam doloremque eos magni voluptatibus?
+              <br><br>
+   
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet repellat dicta fugit doloremque
+                corporis non eligendi minima voluptate hic accusantium! Fugit numquam eaque dolores sit 
+                exercitationem vitae id error blanditiis. Amet nam saepe magnam ullam soluta, vel deserunt
+                 maiores iusto corporis alias. Numquam nesciunt praesentium vitae eos impedit perspiciatis 
+                quibusdam assumenda? Repellat in iure ullam accusantium beatae ea nihil quo veniam nostrum odit 
+               officia distinctio tenetur molestiae nam consectetur harum adipisci, blanditiis aspernatur
+                impedit aperiam rem exercitationem. Repudiandae officia eligendi ea reiciendis! Neque aliquam 
+                eligendi exercitationem molestias porro? Ut nihil officia vel eum modi veniam odit. Quae quos
+               ullam quasi perferendis, distinctio fugit veniam vel! Recusandae commodi, error mollitia 
+               corporis necessitatibus nobis ipsa sequi rerum quisquam hic vitae a! Cupiditate repellendus 
+              facilis, laboriosam doloremque eos magni voluptatibus?
+              <br><br>
+   
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet repellat dicta fugit doloremque
+                corporis non eligendi minima voluptate hic accusantium! Fugit numquam eaque dolores sit 
+                exercitationem vitae id error blanditiis. Amet nam saepe magnam ullam soluta, vel deserunt
+                 maiores iusto corporis alias. Numquam nesciunt praesentium vitae eos impedit perspiciatis 
+                quibusdam assumenda? Repellat in iure ullam accusantium beatae ea nihil quo veniam nostrum odit 
+               officia distinctio tenetur molestiae nam consectetur harum adipisci, blanditiis aspernatur
+                impedit aperiam rem exercitationem. Repudiandae officia eligendi ea reiciendis! Neque aliquam 
+                eligendi exercitationem molestias porro? Ut nihil officia vel eum modi veniam odit. Quae quos
+               ullam quasi perferendis, distinctio fugit veniam vel! Recusandae commodi, error mollitia 
+               corporis necessitatibus nobis ipsa sequi rerum quisquam hic vitae a! Cupiditate repellendus 
+              facilis, laboriosam doloremque eos magni voluptatibus?
+              <br><br>  
+            </p>
+        </section>
+        
+        <script>
+            const text=document.getElementById('text');
+
+            const bird1=document.getElementById('bird1');
+            const bird2=document.getElementById('bird2');
+
+            const forest=document.getElementById('forest');
+
+            const btn=document.getElementById('btn');
+
+            const rocks=document.getElementById('rocks');
+
+            const header=document.getElementById('header');
+
+            window.addEventListener('scroll', () =>{
+                const value=window.scrollY;
+
+                text.style.top = 50+value* -0.5+ '%';
+
+                bird1.style.top = value * -1.5 + 'px';
+                bird1.style.left =value * 2 + 'px';
+
+                bird2.style.top = value * -1.5 + 'px';
+                bird2.style.left = value * -5 + 'px';
+
+                btn.style.marginTop = value * 1.5 + 'px';
+
+                rocks.style.top = value * -0.12 + 'px' ;
+
+                forest.style.top = value * 0.25 + 'px';
+
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>

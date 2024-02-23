@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Prevent default margin/padding and allow full viewport height */
+    }
+
+    .navbar {
+      background: url('/jms-kFHz9Xh3PPU-unsplash.jpg') center/cover no-repeat; /* Set your background image */
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      z-index: 1000; /* Ensure the navbar stays on top */
+    }
+
+    .opacity-overlay {
+      position: absolute;
+      top: 50px; /* Adjust the top position to leave space for the navbar */
+      left: 0;
+      width: 100%;
+      height: calc(100% - 50px); /* Adjust the height to fill the remaining space */
+      background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+      z-index: 1; /* Ensure the overlay is behind the navbar */
+    }
+
+    /* Add additional styling as needed */
+    .content {
+      position: relative;
+      z-index: 2; /* Ensure the content is above the overlay */
+      padding: 20px;
+      color: white;
+      opacity: 0.3; /* Example text color on top of the overlay */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="#home" style="padding-left: 70px;">Home</a>
+    <a href="#news" style="padding-left: 70px;">News</a>
+    <a href="#contact" style="padding-left: 70px;">Contact</a>
+    <a href="#about" style="padding-left: 70px;">About</a>
+</div>
+
+<!-- Opacity Overlay -->
+<div class="opacity-overlay"></div>
+
+<!-- Content Below Navbar -->
+<div class="content">
+  
+</div>
+
+</body>
+</html>

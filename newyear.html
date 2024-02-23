@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax 2023-2024</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .parallax-container {
+            position: relative;
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            overflow: hidden; /* Add overflow to hide scrollbars */
+        }
+
+        .section2023 {
+            background-image: url('/michael-heise-RJnHAEFbwpI-unsplash.jpg'); /* Add your image URL here */
+        }
+
+        .section2024 {
+            background-image: url('/johannes-plenio-RAJONCCrXh8-unsplash.jpg'); /* Add your image URL here */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parallax-container section2023">
+        <div>
+            <h1>2023</h1>
+            <p>Scroll down to welcome 2024</p>
+        </div>
+    </div>
+
+    <div class="parallax-container section2024">
+        <div>
+            <h1>2024</h1>
+            <p>Scroll up to relive 2023</p>
+        </div>
+    </div>
+
+    <script>
+        let lastScrollTop = 0;
+
+        document.addEventListener("scroll", function () {
+            const scrolled = window.scrollY;
+            const direction = scrolled > lastScrollTop ? 'down' : 'up';
+
+            const parallaxElements = document.querySelectorAll(".parallax-container");
+
+            parallaxElements.forEach(function (element, index) {
+                const speed = (index + 1) * 0.2; // Adjust the speed for a smoother effect
+                const yPos = direction === 'down' ? -scrolled * speed : scrolled * speed;
+                element.style.transform = `translate3d(0, ${yPos}px, 0)`;
+            });
+
+            lastScrollTop = scrolled;
+        });
+    </script>
+
+</body>
+</html>
